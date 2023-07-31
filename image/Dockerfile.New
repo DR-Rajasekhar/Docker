@@ -2,4 +2,5 @@ FROM sreeharshav/utils:latest
 LABEL owner="raajasekharr@gmail.com"
 LABEL version="1.0"
 ARG VERSION='1.4.5'
-CMD ["ping", "-c 3", "www.facebook.com"] # Ping www.facebook.com for three times
+# CMD ["ping", "-c 3", "www.facebook.com"] # Ping www.facebook.com for three times
+ENTRYPOINT ["ping", "-c 3", "www.facebook.com"]
