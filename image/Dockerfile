@@ -10,3 +10,4 @@ COPY scorekeeper.js /var/www/html/scorekeeper.js
 ADD error.html /var/www/html/error.html
 ADD https://releases.hashicorp.com/terraform/${VERSION}/terraform_${VERSION}_linux_amd64.zip /usr/local/bin/terraform.zip
 RUN cd /usr/local/bin/ && unzip terraform.zip && rm -rf *.zip && terraform version
+CMD ["nginx", "-g", "daemon off;"]
